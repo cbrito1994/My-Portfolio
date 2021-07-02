@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: darkgrey;
+    height: 12vh;
+    align-items: center;
+}
+
+.header__name {
+    background-color: blue;
+    height: fit-content;
+    padding: 8px 8px 8px 80px;
+}
+
+.header__name h2 {
+    color: whitesmoke;
+
+}
+
+.header__pages {
+    padding-right: 4%;
+    font-size: 20px;
+}
+
+.header__pages a {
+    border-bottom: 2px solid blue;
+    margin-right: 18px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: black;
+}
+
+.header__pages a:hover {
+    color: white;
+}
+
+.header__pages a:last-child {
+    margin-right: 0px;
+}
+
+main, footer {
+    background-color: whitesmoke;    
+}
+
+.main__banner {
+    background-image: url("Assets/Banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    position: relative;
+}
+
+.main__banner h4 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    width: 20%;
+}
+
+.main__banner h4 span {
+    font-size: 18px;
+}
+
+section {
+    display: flex;
+    margin: 20px 0px;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+section aside, footer aside {
+    width: 30%;
+    border-right: 2px solid blue;
+    text-align: end
+}
+
+aside h2 {
+    padding-right: 20px;
+    font-size: 40px;
+    color: darkgray;
+}
+
+section > div, footer > div {
+    width: 65%;
+    margin: auto;
+    text-align: justify;
+}
+
+.main__aboutMe > p {
+    font-size: 20px;
+}
+
+.main__myWork {
+    display: flex;
+    flex-direction: column;
+}
+
+.myWork__first {
+    display: flex;
+}
+
+.myWork__pictures {
+    position: relative;
+    min-width: 300px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 49%;
+    height: 280px;
+    border: 3px solid blue;
+}
+
+@media screen and (max-width: 1045px) {
+    .myWork__pictures {
+        width: 100%;
+    }
+}
+
+.mainPicture {
+    background-image: url("Assets/Covid-Tracker.PNG");
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(151, 134, 247, 0.7);
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay:hover {
+    background-color: transparent;
+}
+
+.pictures__info {
+    position: absolute;
+    bottom: 22px;
+    color: white;
+    padding-left: 14px;
+    background-color: blue;
+}
+
+.myWork__second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondPic {
+    background-image: url("Assets/Password-Generator.PNG");
+}
+
+.thirdPic {
+    background-image: url("Assets/Hockey-Quiz.PNG");
+}
+
+.fourthPic {
+    background-image: url("Assets/Day-Planner.PNG");
+}
+
+.fifthPic {
+    background-image: url("Assets/Weather-Dashboard.PNG");
+}
+
+footer {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.footer__contact {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer__contact span {
+    font-size: large;
+    border-bottom: 2px solid blue;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+main a {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 80px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: teal;
+    font-weight: bolder;
+    font-size: 40px;
+    box-shadow: 0px 0px 8px 4px #888888;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 760px) and (min-width: 370px) {
+    .header__name {
+      padding: 8px;
+    }
+
+    .header__name h2 {
+        font-size: 14px;
+    }
+
+    .header__pages {
+        font-size: 11px;
+    }
+
+    .main__banner h4 {
+        width: 100%;
+        font-size: 20px;
+        right: 0px;
+        text-align: end;
+        padding-right: 14px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    section aside, footer aside {
+        width: 100%;
+        border-bottom: 2px solid blue;
+        border-right: none;
+        margin-bottom: 10px;
+    }
+
+    aside h2 {
+        padding-right: 20px;
+    }
+
+    section > div, footer > div {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer__contact span {
+        font-size: 14px;
+    }
+}
